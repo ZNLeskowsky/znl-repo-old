@@ -1,0 +1,1000 @@
+   12  mount|egrep sd[b-z]
+   13  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   14  vi actor.hpp
+   15  mount|egrep sd[b-z]
+   16  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   17  mount|egrep sd[b-z]
+   18  exit
+   19  mount|egrep sd[b-z]
+   20  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   21  mount|egrep sd[b-z]
+   22  exit
+   23  mount|egrep sd[b-z]
+   24  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   25  mount|egrep sd[b-z]
+   26  lsusb
+   27  mount|egrep sd[b-z]
+   28  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   29  mount|egrep sd[b-z]
+   30  lsusb
+   31  su
+   32  exit
+   33  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   34  mount|egrep sd[b-z]
+   35  exit
+   36  skype &
+   37  pwd
+   38  ls
+   39  cd Development/
+   40  ls
+   41  ls -ldrt boost
+   42  ls -ldrt boost*
+   43  ls -ldrt boost*/*
+   44  ls -ldrt boost/*
+   45  ls boost
+   46  rm boost
+   47  rmdir boost
+   48  ln -s boost_1_55_0 ./boost
+   49  ls -ldrt boost*
+   50  cd boost_1_55_0
+   51  ls
+   52  find . -name actor\*
+   53  cd boost/actor/
+   54  ls
+   55  vi actor.hpp 
+   56  ls ../lockfree/
+   57  vi ../lockfree/queue.hpp 
+   58  vi ../thread/thread.hpp 
+   59  vi ../thread/thread_only.hpp 
+   60  vi ../thread/detail/thread.hpp 
+   61  vi actor.hpp 
+   62  exit
+   63  mount|egrep sd[b-z]
+   64  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   65  mount|egrep sd[b-z]
+   66  exit
+   67  su
+   68  exit
+   69  mount|egrep sd[b-z]
+   70  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   71  mount|egrep sd[b-z]
+   72  exit
+   73  mount|egrep sd[b-z]
+   74  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   75  mount|egrep sd[b-z]
+   76  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   77  mount|egrep sd[b-z]
+   78  exit
+   79  mount|egrep sd[b-z]
+   80  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   81  mount|egrep sd[b-z]
+   82  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+   83  mount|egrep sd[b-z]
+   84  pwd
+   85  ls
+   86  cd Development/
+   87  ls
+   88  ls -ldrt *
+   89  ls boost
+   90  find boost_1_55_0 -name actor\*
+   91  ls -ldrt boost_1_55_0/boost boost_1_55_0/boost/actor boost_1_55_0/boost/actor/actor.*
+   92  mkdir zboost
+   93  ls boost_1_55_0
+   94  ls boost_1_55_0/boost
+   95  ls boost_1_55_0/libs/
+   96  mv zboost boost_znl
+   97  mkdir boost_znl/boost
+   98  mv boost_1_55_0/boost/actor boost_znl/boost/
+   99  mv boost_znl boostZ
+  100  mv boostZ boostZNL
+  101  ls boost_1_55_0/libs/
+  102  ls boost_1_55_0/libs/accumulators/
+  103  ls boost_1_55_0/libs/atomic/
+  104  ls boost_1_55_0/libs/atomic/src
+  105  mkdir boostZNL/libs
+  106  mkdir boostZNL/libs/actor
+  107  (cd boostZNL/libs/actor; mkdir build doc src test)
+  108  vi boost_1_55_0/libs/atomic/src/lockpool.cpp 
+  109  cp boost_1_55_0/libs/atomic/src/lockpool.cpp boostZNL/libs/actor/src/actor.cpp
+  110  cd boostZNL/
+  111  ls
+  112  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  113  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  114  mount|egrep sd[b-z]
+  115  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  116  mount|egrep sd[b-z]
+  117  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  118  mount|egrep sd[b-z]
+  119  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  120  mount|egrep sd[b-z]
+  121  cd Development/
+  122  ls
+  123  cd boostZNL/
+  124  ls
+  125  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  126  su
+  127  cd Development/boostZNL/
+  128  ls
+  129  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  130  mount|egrep sd[b-z]
+  131  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  132  mount|egrep sd[b-z]
+  133  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  134  mount|egrep sd[b-z]
+  135  lsusb
+  136  pwd
+  137  ls bin
+  138  ls
+  139  echo $PATH
+  140  pwd
+  141  mkdir bin
+  142  vi bin/usbreset.sh
+  143  ls -ldrt bin/usbreset.sh 
+  144  chmod ug+x bin/usbreset.sh 
+  145  ls -ldrt bin/usbreset.sh 
+  146  su
+  147  mount|egrep sd[b-z]
+  148  lsusb
+  149  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  150  su
+  151  pwd
+  152  ls ..
+  153  ls /
+  154  ls /tftpboot 
+  155  file /tftpboot 
+  156  mv /tftpboot /z_tftpboot_z 
+  157  su
+  158  exit
+  159  pwd
+  160  cd Development/boostZNL/
+  161  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  162  exit
+  163  su
+  164  mount|egrep sd[b-z]
+  165  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  166  mount|egrep sd[b-z]
+  167  cd Development/boostZNL
+  168  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  169  cd Development/boostZNL/
+  170  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  171  ls ../boost_1_55_0/
+  172  ls ../boost_1_55_0/boost
+  173  ls ../boost_1_55_0/boost/detail/
+  174  vi ../boost_1_55_0/boost/detail/*.hpp
+  175  ls ../boost_1_55_0/libs/detail/
+  176  ls ../boost_1_55_0/libs/detail/test/
+  177  ls -ldrt ../boost_1_55_0/libs/*/detail
+  178  ls -ldrt ../boost_1_55_0/libs/*/detail/*
+  179  mkdir libs/actor/detail
+  180  mkdir boost/detail
+  181  grep ../boost_1_55_0/*/*.hpp
+  182  grep detail ../boost_1_55_0/*/*.hpp
+  183  grep -l detail ../boost_1_55_0/*/*.hpp
+  184  vi `grep -l detail ../boost_1_55_0/*/*.hpp`
+  185  vi `grep -l detail ../boost_1_55_0/boost/*/*.hpp`
+  186  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  187  vi `grep -l detail ../boost_1_55_0/boost/*/*.hpp`
+  188  vi `grep -l "->" ../boost_1_55_0/boost/*/*.hpp`
+  189  vi `egrep -l [-][>] ../boost_1_55_0/boost/*/*.hpp`
+  190  vi `egrep -l \* ../boost_1_55_0/boost/*/*.hpp`
+  191  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  192  exit
+  193  exit
+  194  mount|egrep sd[b-z]
+  195  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  196  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  197  cd Development/boostZNL/
+  198  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  199  mount|egrep sd[b-z]
+  200  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  201  exit
+  202  cd Development/boostZNL/
+  203  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  204  exit
+  205  cd Development/boostZNL/
+  206  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  207  mount|egrep sd[b-z]
+  208  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  209  mount|egrep sd[b-z]
+  210  cd Development/boostZNL/
+  211  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  212  ls
+  213  cp -Rf boost/actor ../boost_1_55_0/boost/actor
+  214  cp -Rf libs/actor ../boost_1_55_0/libs/
+  215  cd ../boost
+  216  ls -ldrt .
+  217  cd ..
+  218  pw
+  219  pwd
+  220  ls -ldrt *
+  221  cd boost_1_55_0
+  222  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  223  vi boost/thread.hpp
+  224  vi boost/thread/thread.hpp 
+  225  vi boost/thread/thread_only.hpp 
+  226  vi boost/thread/*/thread.hpp 
+  227  vi boost/type_traits/decay.hpp
+  228  :q
+  229  history|grep mount
+  230  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  231  mount|egrep sd[b-z]
+  232  #umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  233  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  234  mount|egrep sd[b-z]
+  235  cd Development/
+  236  cd boostZNL
+  237  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  238  cp boost/actor/actor.hpp boost/actor/message_queue.hpp
+  239  cp libs/actor/src/actor.cpp libs/actor/src/task_queue.cpp 
+  240  mv boost/actor/message_queue.hpp boost/actor/task_queue.hpp
+  241  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/task_queue.hpp libs/actor/src/task_queue.cpp 
+  242  ls ../boost_1_55_0/boost/*/*.hpp
+  243  mv boost/actor/task_queue.hpp boost/actor/intrusive_mpsc_queue.hpp
+  244  mv ibs/actor/src/task_queue.cpp ibs/actor/src/intrusive_mpsc_queue.cpp
+  245  mv libs/actor/src/task_queue.cpp libs/actor/src/intrusive_mpsc_queue.cpp
+  246  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  247  cd Development/boostZNL/
+  248  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  249  ps -ef|grep firef
+  250  ps -ef|grep fox
+  251  ps -ef|grep ica
+  252  kill -9 3665
+  253  history|grep mount
+  254  mount|egrep sd[b-z]
+  255  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  256  mount|egrep sd[b-z]
+  257  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  258  which gcc
+  259  gcc -version
+  260  gcc --version
+  261  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  262  ls ../boost_1_55_0/boost/tuple/tuple.hpp 
+  263  vi ../boost_1_55_0/boost/tuple/tuple.hpp 
+  264  mount|egrep sd[b-z]
+  265  pwd
+  266  cd Development/boostZNL/
+  267  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  268  mount|egrep sd[b-z]
+  269  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  270  mount|egrep sd[b-z]
+  271  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  272  cd Development/
+  273  mv boostZNL boost_znl
+  274  ls -ldrt boost*
+  275  rm boost
+  276  ls -ldrt boost*
+  277  cd boost_znl/
+  278  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/intrusive_mpsc_queue.hpp libs/actor/src/intrusive_mpsc_queue.cpp 
+  279  mount|egrep sd[b-z]
+  280  echo umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  281  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  282  mount|egrep sd[b-z]
+  283  exit
+  284  cd Development/
+  285  ls -ldrt boost_znl/
+  286  ls -ldrt boost_znl/*
+  287  ls -ldrt boost_znl/*/*
+  288  ls -ldrt boost_znl/*/*/*
+  289  ls -ldrt boost_znl/*/*/*/*
+  290  ls -ldrt boost_1_55_0/
+  291  ls -ldrt boost_1_55_0/*
+  292  ls -ldrt boost_1_55_0/*/*
+  293  ls boost_znl/
+  294  echo cp -Rf --preserve=all boost_znl/boost/actor boost_1_55_0/boost/actor/
+  295  ls boost_1_55_0/boost/actor/
+  296  mv boost_1_55_0/boost/actor boost_1_55_0/boost/actor_old
+  297  mv boost_1_55_0/libs/actor actor boost_1_55_0/libs/actor_old
+  298  mv boost_1_55_0/libs/actor boost_1_55_0/libs/actor_old
+  299  cp -Rf --preserve=all boost_znl/boost/actor boost_1_55_0/boost/
+  300  cp -Rf --preserve=all boost_znl/libs/actor boost_1_55_0/libs/
+  301  cd boost_1_55_0
+  302  mv ../boost_znl ../boost_znl_OLD
+  303  ls
+  304  rm boost/actor/intrusive_mpsc_queue.hpp 
+  305  rm libs/actor/src/intrusive_mpsc_queue.cpp 
+  306  mv boost/actor_old boost/ZOLD_actor
+  307  mv libs/actor_old libs/ZOLD_actor
+  308  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  309  pwd
+  310  ls
+  311  vi INSTALL 
+  312  ls boost
+  313  ls
+  314  ls doc
+  315  ls more
+  316  ls tools/
+  317  vi bootstrap.bat 
+  318  ls libs
+  319  ls ..
+  320  ls
+  321  pwd
+  322  ls /home/zleskows/
+  323  ls /home/zleskows/Development/
+  324  ls
+  325  mkdir ../install
+  326  ./bootstrap.sh --prefix=/home/zleskows/Development/install
+  327  exit
+  328  lsusb
+  329  pwd
+  330  ls bin
+  331  vi bin/usbreset.sh 
+  332  lsusb
+  333  cd Development/boost_1_55_0
+  334  ls
+  335  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  336  mount|egrep sd[b-z]
+  337  vi boost/actor/actor.hpp libs/actor/src/actor.cpp 
+  338  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  339  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/atomic/detail/*.hpp
+  340  grep "class base_atomic" boost/atomic/*.hpp boost/atomic/detail/*.hpp
+  341  grep -l "class base_atomic" boost/atomic/*.hpp boost/atomic/detail/*.hpp
+  342  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/atomic/detail/*.hpp
+  343  history |grep mount
+  344  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  345  mount|egrep sd[b-z]
+  346  exit
+  347  cd Development/boost_1_55_0
+  348  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/atomic/detail/*.hpp
+  349  mount|egrep sd[b-z]
+  350  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  351  mount|egrep sd[b-z]
+  352  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/atomic/detail/*.hpp
+  353  exit
+  354  cd Development/boost_1_55_0
+  355  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/atomic/detail/*.hpp
+  356  mount|egrep sd[b-z]
+  357  ls -ldrt mozilla-thunderbird*
+  358  mv mozilla-thunderbird mozilla-thunderbird-seagate
+  359  mv mozilla-thunderbird-usb mozilla-thunderbird
+  360  mount|egrep sd[b-z]
+  361  umount /dev/sdb1 /dev/sdb3 /dev/sdb6
+  362  mount|egrep sd[b-z]
+  363  umount /dev/sdb1 /dev/sdb3 /dev/sdb6
+  364  mount|egrep sd[b-z]
+  365  ls bin
+  366  ./bin/usbreset.sh 
+  367  su
+  368  mount|egrep sd[b-z]
+  369  mv mozilla-thunderbird-seagate mozilla-thunderbird
+  370  ls -ldrt mozilla-thunderbird/
+  371  ls -ldrt mozilla-thunderbird*
+  372  ln -s /media/B005-B436 mozilla-thunderbird-usb
+  373  mount|egrep sd[b-z]
+  374  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  375  mount|egrep sd[b-z]
+  376  ls -ldrt mozilla-thunderbird*
+  377  mv mozilla-thunderbird mozilla-thunderbird-seagate
+  378  mv mozilla-thunderbird-usb ./mozilla-thunderbird
+  379  ls -ldrt mozilla-thunderbird*
+  380  cd Development/boost_1_55_0
+  381  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  382  mount|egrep sd[b-z]
+  383  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  384  mount|egrep sd[b-z]
+  385  ls -ldrt mozilla-thunderbird*
+  386  mount|egrep sd[b-z]
+  387  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  388  mount|egrep sd[b-z]
+  389  pwd
+  390  cd Development/boost_1_55_0
+  391  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  392  vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/detail/base_actor.hpp boost/atomic/atomic.hpp 
+  393  vi boost/actor/actor.hpp boost/actor/detail/base_actor.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  394  mv boost/actor/detail/base_actor.hpp boost/actor/detail/actor_detail.hpp
+  395  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  396  mount|egrep sd[b-z]
+  397  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  398  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  399  pwd
+  400  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  401  pwd
+  402  ls
+  403  vi *.*
+  404  ls boost
+  405  find . -name \*.c
+  406  ls libs/
+  407  ls libs/*/src/*.cpp 
+  408  find src -exec echo {} && ls {}.cpp | wc -l \;
+  409  find src -exec "echo {} && ls {}.cpp | wc -l \;"
+  410  mv libs/ZOLD_actor ../libs_ZOLD_actor
+  411  ls boost/thread
+  412  ls libs/thread/
+  413  ls libs/thread/build/
+  414  vi libs/thread/build/*.*
+  415  mount|egrep sd[b-z]
+  416  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  417  mount|egrep sd[b-z]
+  418  cd 
+  419  pwd
+  420  mv mozilla-thunderbird mozilla-thunderbird-sandisk
+  421  mv mozilla-thunderbird-seagate mozilla-thunderbird
+  422  mount|egrep sd[b-z]
+  423  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  424  mount|egrep sd[b-z]
+  425  mv mozilla-thunderbird mozilla-thunderbird-sandisk 
+  426  mv mozilla-thunderbird-sandisk ls -ldrt mozilla-thunderbird*
+  427  ls -ldrt mozilla-thunderbird*
+  428  mv mozilla-thunderbird-sandisk mozilla-thunderbird-seagate
+  429  ln -s /media/B005-B436/mozilla-thunderbird mozilla-thunderbird-sandisk
+  430  ls mozilla-thunderbird-sandisk/
+  431  mv mozilla-thunderbird-sandisk mozilla-thunderbird
+  432  ls -ldrt mozilla-thunderbird*
+  433  cd Development/boost_1_55_0
+  434  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  435  ls -ldrt mozilla-thunderbird*
+  436  (cd ../../;ls -ldrt mozilla-thunderbird*)
+  437  mount|egrep sd[b-z]
+  438  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  439  mount|egrep sd[b-z]
+  440  fg
+  441  ls -ldrt mozilla-thunderbird*
+  442  ls mozilla-thunderbird
+  443  mount|egrep sd[b-z]
+  444  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  445  mount|egrep sd[b-z]
+  446  mv mozilla-thunderbird mozilla-thunderbird-sandisk
+  447  mv mozilla-thunderbird mozilla-thunderbird-seagate mozilla-thunderbird
+  448  mv mozilla-thunderbird-seagate mozilla-thunderbird
+  449  ls -ldrt mozilla-thunderbird*
+  450  su 
+  451  cd Development/boost_1_55_0
+  452  ls
+  453  ls libs/
+  454  which b2
+  455  find . -name b2\*
+  456  file b2 tools/build/v2/engine/bin.linuxx86/b*
+  457  mount|egrep sd[b-z]
+  458  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  459  mount|egrep sd[b-z]
+  460  mv ~/mozilla-thunderbird ~/mozilla-thunderbird-seagate
+  461  mv ~/mozilla-thunderbird-sandisk ~/mozilla-thunderbird
+  462  ls -ldrt ~/mozilla-thunderbird*
+  463  mount|egrep sd[b-z]
+  464  ls /media
+  465  ln -s /media/0037-8D74 ./usb-sandisk4-vfat
+  466  ln -s /media/be688f12-c97e-47db-bc5c-456a19c4151e ./usb-sandisk4-ext2
+  467  ls usb-sandisk4-ext2/
+  468  ls usb-sandisk4-vfat
+  469  ls usb-sandisk4-vfat/club_application/
+  470  ls
+  471  df -k .
+  472  mkdir backup
+  473  mkdir backup/usb_sandisk_4g
+  474  su
+  475  ls -ldrt *
+  476  cd Development/Tor/
+  477  ls -ldrt *
+  478  tar -xvJf tor-browser-linux32-3.5_en-US.tar.xz
+  479  ls -ldrt *
+  480  cd tor-browser_en-US/
+  481  ./start-tor-browser 
+  482  bg
+  483  jobs
+  484  pwd
+  485  cd ../../../Development/
+  486  cd boost_1_55_0
+  487  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp 
+  488  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread.hpp 
+  489  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_only.hpp 
+  490  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_only.hpp boost/thread/detail/thread.hpp 
+  491  grep joinable boost/*/*.hpp boost/*/*/*.hpp
+  492  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/scoped_thread.hpp boost/thread/detail/thread.hpp 
+  493  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/detail/thread.hpp 
+  494  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  495  grep joinable boost/*/*.hpp boost/*/*/*.hpp
+  496  grep "void join()" boost/*/*.hpp boost/*/*/*.hpp
+  497  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  498  mount|egrep sd[b-z]
+  499  umount /dev/sdc1 b2 /dev/sdb3 /dev/sdb6
+  500  ls -ldrt ~/mozilla-thunderbird*
+  501  mv ~/mozilla-thunderbird ~/mozilla-thunderbird-sandisk
+  502  mv ~/mozilla-thunderbird-seagate ~/mozilla-thunderbird
+  503  mount|egrep sd[b-z]
+  504  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  505  mount|egrep sd[b-z]
+  506  mv ~/mozilla-thunderbird ~/mozilla-thunderbird-seagate
+  507  mv ~/mozilla-thunderbird-sandisk ~/mozilla-thunderbird
+  508  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  509  cd Development/boost_1_55_0
+  510  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  511  df -k .
+  512  find boost name ref\*.hpp
+  513  find boost -name ref\*.hpp
+  514  vi boost/ref.hpp 
+  515  pwd
+  516  ls
+  517  history
+  518  exit
+  519  cd Development/boost_1_55_0
+  520  vi boost/log/utility/setup/filter_parser.hpp
+  521  ls libs/actor/
+  522  ls libs/actor/build/
+  523  ls libs/actor/src/
+  524  cd libs/actor/build/
+  525  ls
+  526  ../../../b2 debug
+  527  pwd
+  528  ../../../b2 debug
+  529  pwd
+  530  ls ../../../bin.v2/libs/actor/build/gcc-4.4.7/debug/threading-multi/
+  531  ls ../../../bin.v2/libs/actor/build/gcc-4.4.7/debug/link-static/
+  532  ls ../../../bin.v2/libs/actor/build/gcc-4.4.7/debug/link-static/threading-multi/
+  533  ../../../b2 debug
+  534  ../../../b2 release
+  535  ../../../b2 test
+  536  pwd
+  537  cd ../test
+  538  ls
+  539  ../../../b2 test
+  540  ../../../b2 test-suite
+  541  ../../../b2 test-suite actor
+  542  ../../../b2 debug
+  543  vi actor_test.cpp Jamfile.v2 
+  544  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  545  ../../../b2 debug
+  546  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  547  pwd
+  548  (cd ../build/; ../../../b2 debug )
+  549  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  550  (cd ../build/; ../../../b2 debug )
+  551  (cd ../build/; ../../../b2 release )
+  552  ../../../b2 debug
+  553  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  554  ../../../b2 debug
+  555  vi *Jamfile.v2 
+  556  pwd
+  557  vi ../../*/test/Jamfile.v2
+  558  ../../../b2 debug
+  559  vi ../../thread/test/Jamfile.v2
+  560  ../../../b2 debug
+  561  vi ../../thread/test/Jamfile.v2
+  562  ../../../b2 debug
+  563  ../../../b2 release
+  564  ../../../b2 install
+  565  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  566  ../../../b2 debug
+  567  ../../../b2 release
+  568  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  569  ../../../b2 release
+  570  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  571  ../../../b2 release
+  572  ../../../b2 debug
+  573  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  574  ../../../b2 debug
+  575  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  576  ../../../b2 debug
+  577  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  578  ../../../b2 debug
+  579  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  580  ../../../b2 debug
+  581  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  582  ../../../b2 debug
+  583  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  584  ../../../b2 debug
+  585  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp 
+  586  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  587  ../../../b2 debug
+  588  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  589  ../../../b2 debug
+  590  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  591  ../../../b2 debug
+  592  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  593  ../../../b2 debug
+  594  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  595  ../../../b2 debug
+  596  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  597  ../../../b2 debug
+  598  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  599  ../../../b2 debug
+  600  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  601  ../../../b2 debug
+  602  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  603  ../../../b2 debug
+  604  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  605  ../../../b2 debug
+  606  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  607  ../../../b2 debug
+  608  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  609  ../../../b2 debug
+  610  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  611  ../../../b2 debug
+  612  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp 
+  613  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp ../../../boost/ref.hpp 
+  614  ../../../b2 debug
+  615  mount
+  616  history
+  617  pwd
+  618  exit
+  619  su
+  620  echo mv /home/zleskows/.ICAClient/?????? /home/zleskows/Z.ICAClient/ > ica.notes
+  621  echo ps -ef|grep ica >> ica.notes 
+  622  cat ica.notes 
+  623  exit
+  624  ls -ldrt mozilla-thunderbird*
+  625  mount|egrep sd[b-z]
+  626  ls mozilla-thunderbird
+  627  mount|egrep sd[b-z]
+  628  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  629  mount|egrep sd[b-z]
+  630  mv mozilla-thunderbird mozilla-thunderbird-sandisk
+  631  mv mozilla-thunderbird-seagate mozilla-thunderbird
+  632  mount|egrep sd[b-z]
+  633  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  634  mount|egrep sd[b-z]
+  635  mv mozilla-thunderbird mozilla-thunderbird-seagate
+  636  mv mozilla-thunderbird-sandisk mozilla-thunderbird
+  637  cd Development/
+  638  mv boost_znl_OLD/ ZNL_boost_OLD
+  639  cd boost_1_55_0
+  640  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  641  su
+  642  yum update firefox
+  643  su
+  644  find . -name hello
+  645  ls
+  646  ls libs/
+  647  ls libs/any/
+  648  ls libs/array
+  649  ls libs/atomic
+  650  ls libs/atomic/src
+  651  ls libs/atomic/build/
+  652  vi libs/atomic/build/Jamfile.v2 
+  653  vi libs/*/build/Jamfile.v2 
+  654  vi libs/*/build/Jamfile.v2 libs/actor/build/Jamfile.v2
+  655  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  656  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp libs/actor/build/Jamfile.v2 boost/atomic/atomic.hpp boost/thread/thread_[of][nu]*.hpp boost/thread/*/thread.hpp 
+  657  ls
+  658  vi *.jam *.bat
+  659  which b2
+  660  file ./b2
+  661  ls -ldrt b2
+  662  ./b2 debug
+  663  find . -name call_traits\*
+  664  mkdir ~/Z.ICAClient
+  665  ls -ldrt ~/.ICAClient/
+  666  ls -ldrt ~/.ICAClient/*
+  667  ls -ldrt ~/.ICAClient/??????
+  668  mv ~/.ICAClient/?????? ~/Z.ICAClient/
+  669  ls -ldrt ~/.ICAClient/*
+  670  mv /home/zleskows/.ICAClient/k41esj_BAK /home/zleskows/Z.ICAClient/k41esj
+  671  ls -ldrt ~/.ICAClient/cache/*
+  672  ls -ldrt ~/.ICAClient/cache/zlcache/*
+  673  ls -ldrt ~/.ICAClient/cache/zlcache
+  674  file ~/.ICAClient/cache/zlcache
+  675  mv home/zleskows/.ICAClient/cache/zlcache home/zleskows/Z.ICAClient/
+  676  mv /home/zleskows/.ICAClient/cache/zlcache /home/zleskows/Z.ICAClient/
+  677  ./b2 install
+  678  pwd
+  679  ls ../install/
+  680  ls ../install/include/
+  681  ls ../install/include/boost/
+  682  ls ../install/include/boost/actor/
+  683  ls ../install/include/boost/actor/detail/
+  684  ls ../install/lib/
+  685  ls -ldrt ../install/lib/libboost_actor.*
+  686  ls libs/actor/
+  687  ls libs/actor/test/
+  688  ls libs/actor/src/ 
+  689  find . -name test
+  690  history |grep find
+  691  find . -name test > find_test.txt
+  692  head find_test.txt 
+  693  wc find_test.txt 
+  694  ls libs/flyweight/tst
+  695  ls libs/flyweight/test
+  696  ls libs/integer/test
+  697  vi libs/integer/test/*.*
+  698  grep lightweight_test libs/*/test/*.cpp
+  699  grep lightweight_test libs/*/test/*.cpp|more
+  700  grep lightweight_test libs/atomic/test/*.cpp|more
+  701  grep lightweight_test libs/*/test/*.cpp > grep_lightweight_test.txt
+  702  more grep_lightweight_test.txt 
+  703  grep lightweight_test libs/intrusive/test/*.cpp|more
+  704  vi libs/intrusive/test/*.cpp
+  705  ls libs/actor/test/
+  706  cp libs/integer/test/Jamfile.v2 libs/actor/test/integer_Jamfile.v2
+  707  cp libs/intrusive/test/Jamfile.v2 libs/actor/test/intrusive_Jamfile.v2
+  708  vi libs/actor/test/*.cpp
+  709  vi libs/actor/test/*.*
+  710  cp libs/actor/test/intrusive_list_test.cpp libs/actor/test/actor_test.cpp
+  711  cp libs/actor/test/integer_Jamfile.v2 libs/actor/test/Jamfile.v2 
+  712  vi libs/actor/test/actor_test.cpp libs/actor/test/Jamfile.v2 libs/actor/test/int*.cpp libs/actor/in*.v2
+  713  pwd
+  714  vi libs/actor/test/Jamfile.v2 
+  715  ./b2 install
+  716  find . -name actor_test\*
+  717  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test*
+  718  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  719  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test*
+  720  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  721  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  722  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  723  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test*
+  724  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  725  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  726  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  727  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  728  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  729  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  730  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  731  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  732  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  733  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  734  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  735  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  736  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  737  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  738  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  739  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  740  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  741  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  742  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  743  mv ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.output ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.x
+  744  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  745  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  746  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  747  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  748  history|grep mount
+  749  ount|egrep sd[b-z]
+  750  mount|egrep sd[b-z]
+  751  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  752  mount|egrep sd[b-z]
+  753  rm ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  754  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  755  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  756  file ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  757  mount|egrep sd[b-z]
+  758  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  759  mount|egrep sd[b-z]
+  760  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  761  mount|egrep sd[b-z]
+  762  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  763  mount|egrep sd[b-z]
+  764  history
+  765  pwd
+  766  ls
+  767  ls ..
+  768  echo vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??* > actor_test.notes
+  769  cat actor_test.notes 
+  770  echo /home/zleskows/Development/boost_1_55_0/libs/actor/test >> actor_test.notes 
+  771  cat actor_test.notes 
+  772  vi actor_test.notes 
+  773  echo vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp >> actor_test.notes 
+  774  echo 
+  775  echo ../../../b2 debug >> actor_test.notes 
+  776  cat actor_test.notes 
+  777  pwd
+  778  vi actor_test.notes 
+  779  echo /home/zleskows/Development/boost_1_55_0: >> actor_test.notes 
+  780  cat actor_test.notes 
+  781  vi actor_test.notes 
+  782  exit
+  783  su
+  784  ]exit
+  785  exit
+  786  cd ~ && echo wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
+  787  cd Development/
+  788  ls
+  789  wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
+  790  cd Tor
+  791  ls
+  792  cp tails-i386-0.22.iso /media/B005-B436/
+  793  exit
+  794  mount|egrep sd[b-z]
+  795  mv mozilla-thunderbird mozilla-thunderbird-sandisk
+  796  mv mozilla-thunderbird-seagate mozilla-thunderbird
+  797  ls bin/
+  798  cd bin
+  799  vi mv-mozilla-thunderbird.sh
+  800  ls -ldrt *
+  801  chmod ug+x mv-mozilla-thunderbird.sh 
+  802  vi *.sh
+  803  which sh
+  804  vi *.sh
+  805  ls
+  806  ./mv-mozilla-thunderbird.sh xxx
+  807  vi *.sh
+  808  ls
+  809  cd ..
+  810  ls -ldrt mozilla-thunderbird*
+  811  mv mozilla-thunderbird mozilla-thunderbird-seagate
+  812  ls -ldrt mozilla-thunderbird-s*
+  813  pwd
+  814  which mv.mozilla-thunderbird.sh
+  815  vi .??*
+  816  vi .pr??*
+  817  vi .bash??*
+  818  echo $HOME
+  819  echo $PATH
+  820  which mv-mozilla-thunderbird.sh
+  821  vi ~/bin/*.sh
+  822  ls -ldrt mozilla-thunderbird-s*
+  823  ln -s /media/ce37020b-d4d6-4b73-9e63-94e49af2008f/ThinkPadX1/mozilla-thunderbird-x1 mozilla-thunderbird-sea
+  824  ln -s /media/B005-B436/mozilla-thunderbird mozilla-thunderbird-san
+  825  ls -ldrt mozilla-thunderbird-s*
+  826  mv-mozilla-thunderbird.sh seagate
+  827  vi ~/bin/*.sh
+  828  mv-mozilla-thunderbird.sh seagate
+  829  mv-mozilla-thunderbird.sh sandisk
+  830  ls -ldrt mozilla-thunderbird*
+  831  mount|egrep sd[b-z]
+  832  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  833  mount|egrep sd[b-z]
+  834  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  835  mount|egrep sd[b-z]
+  836  mkdir backup/usb_sandisk_4g/be688f12-c97e-47db-bc5c-456a19c4151e
+  837  mkdir backup/usb_sandisk_4g/0037-8D74
+  838  mount|egrep sd[b-z] > backup/usb_sandisk_4g/mounts.txt
+  839  cat backup/usb_sandisk_4g/mounts.txt 
+  840  man cp
+  841  su
+  842  exit
+  843  cd Development/boost_1_55_0
+  844  history|grep actor
+  845  ls ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  846  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp libs/actor/test/*.cpp libs/actor/src/actor.cpp libs/actor/test/Jamfile.v2 ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  847  ls .ICAClient/
+  848  ps -ef|grep ica
+  849  kill -9 2761
+  850  ps -ef|grep ica
+  851  ls .ICAClient/
+  852  mv .ICAClient/?????? Z.ICAClient/
+  853  ls .ICAClient/
+  854  mount|egrep sd[b-z]
+  855  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  856  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  857  mount|egrep sd[b-z]
+  858  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  859  mount|egrep sd[b-z]
+  860  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  861  mount|egrep sd[b-z]
+  862  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  863  mount|egrep sd[b-z]
+  864  which wfica
+  865  ps -ef|grep ica
+  866  mount|egrep sd[b-z]
+  867  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  868  mount|egrep sd[b-z]
+  869  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  870  mount|egrep sd[b-z]
+  871  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  872  mount|egrep sd[b-z]
+  873  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  874  mount|egrep sd[b-z]
+  875  ls ~/bin
+  876  ls -ldrt mozilla-thunderbird*
+  877  whoami
+  878  mv-mozilla-thunderbird.sh seagate
+  879  ls -ldrt mozilla-thunderbird*
+  880  mount|egrep sd[b-z]
+  881  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  882  mount|egrep sd[b-z]
+  883  mv-mozilla-thunderbird.sh sandisk
+  884  ls -ldrt mozilla-thunderbird*
+  885  ls mozilla-thunderbird
+  886  mount|egrep sd[b-z]
+  887  cd Development/boost_1_55_0
+  888  history |grep vi
+  889  vi boost/actor/actor.hpp boost/actor/detail/actor_detail.hpp libs/actor/src/actor.cpp libs/actor/test/*.cpp libs/actor/src/actor.cpp libs/actor/test/Jamfile.v2 ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+  890  ls ~/bin
+  891  ls ~/bin/usbreset.sh
+  892  ~/bin/usbreset.sh
+  893  su
+  894  mount|egrep sd[b-z]
+  895  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  896  mv-mozilla-thunderbird.sh seagate
+  897  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  898  mount|egrep sd[b-z]
+  899  su
+  900  mv-mozilla-thunderbird.sh sandisk
+  901  mount|egrep sd[b-z]
+  902  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  903  mount|egrep sd[b-z]
+  904  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  905  mount|egrep sd[b-z]
+  906  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  907  mount|egrep sd[b-z]
+  908  mv-mozilla-thunderbird.sh seagate
+  909  mount|egrep sd[b-z]
+  910  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  911  mount|egrep sd[b-z]
+  912  mv-mozilla-thunderbird.sh sandisk
+  913  mount|egrep sd[b-z]ls /usr/local
+  914  ls /usr/local
+  915  vi ~/dev/plan9.sha1
+  916  whoami
+  917  vi ~/Development/plan9.sha1
+  918  ls -ldrt /usr/local
+  919  pwd
+  920  vi .bash_profile .bashrc
+  921  exit
+  922  ps -ef |grep ICA
+  923  kill -9 9472
+  924  ps -ef |grep ICA
+  925  kill -9 9465
+  926  ps -ef |grep ICA
+  927  kill -9 9473
+  928  ps -ef |grep ICA
+  929  kill -9 9528
+  930  ps -ef |grep ICA
+  931  su
+  932  exit
+  933  which sam
+  934  echo $PATH
+  935  rehash
+  936  source .bash_profile 
+  937  echo $PATH
+  938  which sam
+  939  which acme
+  940  sam
+  941  9 man sam
+  942  9 man sam |more
+  943  ls
+  944  sam ica.notes 
+  945  which devdraw
+  946  devdraw
+  947  pwd
+  948  9 man sam |more
+  949      
+  950  acme
+  951  xhost +
+  952  sam 
+  953  mount|egrep sd[b-z]
+  954  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  955  mount|egrep sd[b-z]
+  956  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  957  mount|egrep sd[b-z]
+  958  ls -ldrt mozilla-thunderbird
+  959  mount|egrep sd[b-z]
+  960  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  961  mount|egrep sd[b-z]
+  962  mv-mozilla-thunderbird.sh seagate
+  963  mount|egrep sd[b-z]
+  964  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  965  mount|egrep sd[b-z]
+  966  mv-mozilla-thunderbird.sh sandisk
+  967  mount|egrep sd[b-z]
+  968  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  969  mount|egrep sd[b-z]
+  970  man grub-install
+  971  info grun-install
+  972  info grub-install
+  973  su
+  974  mount|egrep sd[b-z]
+  975  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  976  mount|egrep sd[b-z]
+  977  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  978  mount|egrep sd[b-z]
+  979  ps -ef|grep ICA
+  980  kill -9 9375
+  981  mount|egrep sd[b-z]
+  982  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  983  mount|egrep sd[b-z]
+  984  ps -ef|grep ICA
+  985  kill -9 2361
+  986  mount|egrep sd[b-z]
+  987  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  988  mount|egrep sd[b-z]
+  989  mv-mozilla-thunderbird.sh seagate
+  990  mv-mozilla-thunderbird.sh sandisk
+  991  mount|egrep sd[b-z]
+  992  umount /dev/sdb2 /dev/sdb3 /dev/sdb6
+  993  mount|egrep sd[b-z]
+  994  ls mozilla-thunderbird
+  995  mount|egrep sd[b-z]
+  996  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+  997  mount|egrep sd[b-z]
+  998  ps -ef|grep ICAC
+  999  kill -9 3648
+ 1000  ps -ef|grep ICAC
+ 1001  mount|egrep sd[b-z]
+ 1002  pwd
+ 1003  ls -ldrt mozilla-thunderbird*
+ 1004  umount /dev/sdb1 2 /dev/sdb3 /dev/sdb6
+ 1005  cd Development/
+ 1006  ls
+ 1007  cd boost_1_55_0
+ 1008  ls
+ 1009  history
+ 1010  pwd
+ 1011  history > history_as_of_20140215.txt

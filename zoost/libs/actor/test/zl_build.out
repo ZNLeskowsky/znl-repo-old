@@ -1,0 +1,70 @@
+../../../b2 actor :
+link.jam: No such file or directory
+Performing configuration checks
+
+    - lockfree boost::atomic_flag : yes (cached)
+...patience...
+...patience...
+...found 1705 targets...
+...updating 7 targets...
+gcc.compile.c++ ../../../bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.o
+gcc.compile.c++ ../../../bin.v2/libs/actor/build/gcc-4.4.7/debug/link-static/threading-multi/actor.o
+In file included from ../../../boost/date_time/posix_time/posix_time_system.hpp:14,
+                 from ../../../boost/date_time/posix_time/ptime.hpp:12,
+                 from ../../../boost/date_time/posix_time/posix_time_types.hpp:12,
+                 from ../../../boost/thread/thread_time.hpp:11,
+                 from ../../../boost/thread/lock_types.hpp:18,
+                 from ../../../boost/thread/pthread/thread_data.hpp:12,
+                 from ../../../boost/thread/thread_only.hpp:17,
+                 from ../../../boost/thread/thread.hpp:12,
+                 from ../../../boost/actor/detail/actor_detail.hpp:24,
+                 from ../../../boost/actor/actor.hpp:25,
+                 from ../../../libs/actor/src/actor.cpp:12:
+../../../boost/date_time/time_system_split.hpp:41:1: warning: use of C99 long long integer constant
+In file included from ../../../boost/ratio/ratio.hpp:47,
+                 from ../../../boost/chrono/duration.hpp:41,
+                 from ../../../boost/chrono/time_point.hpp:33,
+                 from ../../../boost/thread/lock_types.hpp:22,
+                 from ../../../boost/thread/pthread/thread_data.hpp:12,
+                 from ../../../boost/thread/thread_only.hpp:17,
+                 from ../../../boost/thread/thread.hpp:12,
+                 from ../../../boost/actor/detail/actor_detail.hpp:24,
+                 from ../../../boost/actor/actor.hpp:25,
+                 from ../../../libs/actor/src/actor.cpp:12:
+../../../boost/ratio/ratio_fwd.hpp:64:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:64:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:65:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:65:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:66:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:66:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:67:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:67:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:68:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:68:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:69:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:69:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:70:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:70:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:71:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:71:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:72:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:72:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:73:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:73:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:74:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:74:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:75:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:75:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:76:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:76:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:77:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:77:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:78:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:78:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:79:1: warning: use of C99 long long integer constant
+../../../boost/ratio/ratio_fwd.hpp:79:1: warning: use of C99 long long integer constant
+gcc.archive ../../../bin.v2/libs/actor/build/gcc-4.4.7/debug/link-static/threading-multi/libboost_actor.a
+gcc.link ../../../bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test
+testing.capture-output ../../../bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.run
+**passed** ../../../bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.test
+...updated 7 targets...

@@ -1,0 +1,317 @@
+//  Actor library actor.hpp header file
+//
+//  Simple actor implementation.
+//  Copyright (c) 2013-? Zoltan Leskowsky
+//
+//  Distributed under the Boost Software License, Version 1.0. (See
+//  accompanying file LICENSE_1_0.txt or copy at
+//  http://www.boost.org/LICENSE_1_0.txt)
+
+#ifndef BOOST_ACTOR_HPP
+#define BOOST_ACTOR_HPP
+
+#include <boost/assert.hpp>
+#ifdef BOOST_NO_CXX11_DELETED_FUNCTIONS
+#include <boost/noncopyable.hpp>
+#endif
+#include <boost/static_assert.hpp>
+#include <boost/type_traits/has_trivial_assign.hpp>
+#include <boost/type_traits/has_trivial_destructor.hpp>
+
+#include <boost/atomic/atomic.hpp>
+#include <boost/lockfree/queue.hpp>
+#include <boost/thread/thread.hpp>
+
+#if defined(_MSC_VER)
+#pragma warning(push)
+//#pragma warning(disable: 4324) // structure was padded due to __declspec(align())
+#endif
+
+namespace boost {
+namespace actor {
+
+namespace detail {
+
+class task_queue;
+class ::boost::actor::task_thread;
+
+class queuable_task
+{
+protected:
+    queuable_task() : next_(0) {}
+private:
+    virtual void execute();
+    void set_next(queuable_task* task) { next_ = task; }
+    queuable_task* next() { return next_; }
+    friend class task_queue;
+    friend class ::boost::actor::task_thread;
+private:
+    queuable_task* volatile next_;
+};
+
+class task_queue
+{
+public:
+    task_queue() : tail_(&dummy_), head_(&dummy_) {}
+
+    void push(queuable_task* task)
+    {
+        tail_.exchange(task)->set_next(task); // atomic exchange may block, in which case try_pop() may block too
+    }
+
+    queuable_task* try_pop();
+
+    queuable_task* wait_pop()
+    {
+        queuable_task* task;
+        while (0 == (task = try_pop())); // busy wait
+        return task;
+    }
+
+private:
+    queuable_task* head_;
+    atomic<queuable_task*> tail_;
+    queuable_task dummy_;
+}
+
+#if 0 //TODO: variadic template version
+template <class DerivedActor, typename Act, typename... Ts>
+class message
+{
+private:
+    friend void send(DerivedActor& actor, Act act, Ts... params);
+    message(DerivedActor& actor, Act act, Ts... params)
+      : actor_(actor), act_(act), ... {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)(...);
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+    ...
+};
+#endif //TODO: variadic template version
+
+template <class DerivedActor, typename Act,
+    typename T1=void, typename T2=void, typename T3=void, typename T4=void,
+    typename T5=void, typename T6=void, typename T7=void, typename T8=void>
+class message;
+
+template <class DerivedActor, typename Act>
+class message<DerivedActor, Act> : public queuable_task
+{
+private:
+    friend void send(DerivedActor& actor, Act act);
+    message(DerivedActor& actor, Act act)
+      : actor_(actor), act_(act) {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)();
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+};
+
+template <class DerivedActor, typename Act, typename T>
+class message<DerivedActor, Act, T> : public queuable_task
+{
+private:
+    friend void send(DerivedActor& actor, Act act, T param);
+    message(DerivedActor& actor, Act act, T param)
+      : actor_(actor), act_(act), param_(param) {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)(param_);
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+    typename boost::call_traits<T>::value_type param_;
+};
+
+template <class DerivedActor, typename Act, typename T1, typename T2>
+class message<DerivedActor, Act, T1, T2> : public queuable_task
+{
+private:
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2);
+    message(DerivedActor& actor, Act act, T1 param1, T2 param2)
+      : actor_(actor), act_(act), param1_(param1), param2_(param2) {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)(param1_, param2_);
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+    typename boost::call_traits<T1>::value_type param1_;
+    typename boost::call_traits<T2>::value_type param2_;
+};
+
+template <class DerivedActor, typename Act, typename T1, typename T2, typename T3>
+class message<DerivedActor, Act, T1, T2, T3> : public queuable_task
+{
+private:
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3);
+    message(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3)
+      : actor_(actor), act_(act), param1_(param1), param2_(param2), param3_(param3) {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)(param1_, param2_, param3_);
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+    typename boost::call_traits<T1>::value_type param1_;
+    typename boost::call_traits<T2>::value_type param2_;
+    typename boost::call_traits<T3>::value_type param3_;
+};
+
+template <class DerivedActor, typename Act, typename T1, typename T2, typename T3, typename T4>
+class message<DerivedActor, Act, T1, T2, T3, T4> : public queuable_task
+{
+private:
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3, T4 param4);
+    message(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3, T4 param4)
+      : actor_(actor), act_(act), param1_(param1), param2_(param2), param3_(param3), param4_(param4) {}
+protected:
+    virtual void execute()
+    {
+        (actor_.*act_)(param1_, param2_, param3_, param4_);
+        delete this;
+    }
+private:
+    DerivedActor& actor_;
+    Act act_;
+    typename boost::call_traits<T1>::value_type param1_;
+    typename boost::call_traits<T2>::value_type param2_;
+    typename boost::call_traits<T3>::value_type param3_;
+    typename boost::call_traits<T4>::value_type param4_;
+};
+
+class base_actor
+{
+protected:
+    base_actor() : thread_(0) {}
+    base_actor(::boost::actor::task_thread& thread) : thread_(&thread) {}
+    void associate(::boost::actor::task_thread& thread) { thread_ = &thread; }
+    ::boost::actor::task_thread* thread() { return thread_; }
+private:
+    ::boost::actor::task_thread* thread_;
+};
+
+} // namespace detail
+
+class base_task : public detail::queuable_task
+{
+private:
+    virtual void execute() = 0;
+};
+
+class scheduler;
+
+class task_thread : public detail::queuable_task
+{
+public:
+    task_thread() : thread_(::boost::ref(*this)), scheduler_(0) {}
+    ~task_thread() { stop(); thread_.join(); }
+    void schedule(base_task& task) { task_queue_.push(&task); }
+    void stop() { task_queue_.push(&stopper_); }
+    void join() { thread_.join(); }
+protected:
+    task_thread(scheduler& sched);
+    detail::task_queue& task_queue() { return task_queue_; }
+    void queue_task(detail::queuable_task& task) { task_queue_.push(&task); }
+    static bool is_stopper(const detail::queuable_task* task) { return (task == &stopper_); }
+private:
+    virtual void execute();
+    friend class ::boost::thread::thread;
+    void operator()() { task_thread::execute(); }
+private:
+    ::boost::thread::thread thread_;
+    detail::task_queue task_queue_;
+    scheduler* scheduler_;
+    static detail::queuable_task stopper_;
+};
+
+class scheduler : public task_thread
+{
+public:
+    scheduler() : task_thread(*this) {}
+private:
+    friend class task_thread;
+    detail::task_queue& free_thread_queue() { return free_thread_queue_; }
+    virtual void execute();
+    friend class ::boost::thread::thread;
+    void operator()() { scheduler::execute(); } // hides task_thread::operator()
+private:
+    detail::task_queue free_thread_queue_;
+};
+
+inline task_thread::task_thread(scheduler& sched) : thread_(::boost::ref(*this)), scheduler_(&sched)
+{
+}
+
+template <class DerivedActor> class actor : public detail::base_actor
+{
+public:
+    using void associate(task_thread& thread);
+
+    template <typename Act>
+    friend void send(DerivedActor& actor, Act act)
+    {
+        actor.schedule(
+            new message<DerivedActor, Act>(actor, act));
+    }
+    template <typename Act, typename T>
+    friend void send(DerivedActor& actor, Act act, T param)
+    {
+        actor.schedule(
+            new message<DerivedActor, Act, T>(actor, act, param));
+    }
+    template <typename Act, typename T1, typename T2>
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2)
+    {
+        actor.schedule(
+            new message<DerivedActor, Act, T1, T2>(actor, act, param1, param2));
+    }
+    template <typename Act, typename T1, typename T2, typename T3>
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3)
+    {
+        actor.schedule(
+            new message<DerivedActor, Act, T1, T2, T3>(actor, act, param1, param2, param3));
+    }
+    template <typename Act, typename T1, typename T2, typename T3, typename T4>
+    friend void send(DerivedActor& actor, Act act, T1 param1, T2 param2, T3 param3, T4 param4)
+    {
+        actor.schedule(
+            new message<DerivedActor, Act, T1, T2, T3, T4>(actor, act, param1, param2, param3, param4));
+    }
+
+protected:
+    actor() {}
+    actor(task_thread& thread) : detail::base_actor(thread) {}
+
+private:
+    void schedule(queuable_task* message) { thread()->queue_task(*message); }
+};
+
+} // namespace actor
+} // namespace boost
+
+#if defined(_MSC_VER)
+#pragma warning(pop)
+#endif
+
+#endif // BOOST_ACTOR_HPP

@@ -1,0 +1,5 @@
+/home/zleskows/Development/boost_1_55_0:
+  vi ./bin.v2/libs/actor/test/actor_test.test/gcc-4.4.7/debug/link-static/threading-multi/actor_test.??*
+/home/zleskows/Development/boost_1_55_0/libs/actor/test:
+  vi actor_test.cpp Jamfile.v2 ../../../boost/actor/actor.hpp ../../../boost/actor/detail/actor_detail.hpp ../../../libs/actor/src/actor.cpp
+  ../../../b2 debug

@@ -1,0 +1,36 @@
+#  Boost Actor Library Jamfile
+#
+#  (C) Copyright Zoltan Leskowsky 2014.
+#
+#  Distributed under the Boost Software License, Version 1.0.
+#  (See accompanying file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+#
+# See library home page at http://www.boost.org/libs/actor
+
+#import common ;
+
+project boost/actor
+    : source-location ../src
+    : requirements
+      #<threading>multi
+      <link>shared:<define>BOOST_ACTOR_DYN_LINK=1
+      <link>static:<define>BOOST_ACTOR_STATIC_LINK=1
+      <define>BOOST_ACTOR_SOURCE
+    : usage-requirements
+      <link>shared:<define>BOOST_ACTOR_DYN_LINK=1
+      <link>static:<define>BOOST_ACTOR_STATIC_LINK=1
+    ;
+
+SOURCES = actor mpsc_queue ;
+
+#alias actor_sources
+#   : actor.cpp mpsc_queue.cpp ;
+#explicit actor_sources ;
+
+lib boost_actor
+   : $(SOURCES).cpp #actor_sources
+   #: <link>shared:<define>BOOST_ACTOR_DYN_LINK=1
+   #  <link>static:<define>BOOST_ACTOR_STATIC_LINK=1
+   ;
+
+boost-install boost_actor ;

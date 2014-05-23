@@ -1,0 +1,3 @@
+vi boost/actor/mpsc_channel.hpp boost/actor/detail/mpsc_queue_detail.hpp libs/actor/src/detail/mpsc_queue_detail.cpp
+vi boost/actor/csp_task.hpp libs/actor/src/csp_task.cpp
+vi boost/actor/actor.hpp libs/actor/src/actor.cpp boost/actor/detail/actor_detail.hpp
